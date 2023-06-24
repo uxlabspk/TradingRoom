@@ -1,0 +1,82 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.btn-rounded{
+    position: relative;
+    padding: 0.5375rem 4.375rem 0.5375rem 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    border: 0.1rem solid rgba($white, 0.6);
+    background-color: $white;
+    display: block;
+
+    span{
+        position: absolute;
+        background-color: $primary;
+        width: 2.2rem;
+        height: 2.2rem;
+        top: 50%;
+        right: 5px;
+        transform: translateY(-50%);
+        border-radius: 50%;
+
+        svg{
+            color: $white;
+            margin-top: 0.5rem;
+        }
+    }
+    &:hover{
+        @include gradient;
+        color: $white;
+
+        span{
+            background-color: rgba($black, 0.6);
+        }
+    }
+}
+
+.btn-rounded-1 {
+    @include media-breakpoint-down(sm){
+        display: none;
+    }
+    
+    position: relative;
+    padding: 0.5375rem 4.375rem 0.5375rem 1.25rem;
+    font-weight: 600;
+    height: 4.3rem;
+    font-size: 1.5rem;
+    margin-top: 1.2rem;
+    border: 0.1rem solid rgba($white, 0.6);
+    background-color: $white;
+    display: block;
+
+    span {
+        position: absolute;
+        background-color: $primary;
+        width: 2.5rem;
+        height: 2.5rem;
+        top: 50%;
+        right: 5px;
+        transform: translateY(-50%);
+        border-radius: 50%;
+
+        i {
+            position: absolute;
+            top: 50%;
+            right: 8.5px;
+            color: $white;
+            font-size: 1.5rem;
+            line-height: 0px;
+        }
+
+    }
+
+    &:hover {
+        @include gradient;
+        color: $white;
+
+        span {
+            background-color: rgba($black, 0.6);
+        }
+    }
+}
